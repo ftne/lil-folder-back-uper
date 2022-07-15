@@ -11,7 +11,6 @@ import (
 func main() {
 	destination := flag.String("destination", "", "destination folder")
 	flag.Parse()
-	println("destination = " + *destination)
 	for _, path := range flag.Args() {
 		archiveName := filepath.Base(path) + ".zip"
 		zipSource(path, *destination+archiveName)
